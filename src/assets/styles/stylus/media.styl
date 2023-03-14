@@ -1,0 +1,26 @@
+
+$base-media = 0 480px 768px 992px 1200px 1600px; // 自适应尺寸
+
+/*
+ * ms // 根据$base-media自适应尺寸来生成样式
+ * param {type} // css样式名, 如'font-size'
+ * param {value}  // 值要一一对应, 自适应尺寸, 如10px, 20px, 30px, 40px, 对应着480px 768px 992px 1200px
+ * 调用 ms('font-size', 20px 38px 48px 68px)
+ */
+ms(type, value) {
+  for i in 0 .. 6 {
+    innerMediaStyle(type, i, value[i]);
+  }
+}
+
+// 生成样式
+innerMediaStyle(type, i, value) {
+  @media (min-width: $base-media[i]) {
+    vendor(type, value);
+  }
+}
+
+// css变量名
+vendor(prop, args) {
+  {prop}: args;
+}

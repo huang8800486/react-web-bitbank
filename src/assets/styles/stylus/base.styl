@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'PingFang SC-Regular';
+  src: url('/@/assets/font/PingFang-SC-Regular.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: FZShuSong-Z01T;
+  src: url('/@/assets/font/FZShuSong-Z01T.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: FZBeiWeiKaiShu-Z15T;
+  src: url('/@/assets/font/FZBeiWeiKaiShu-Z15T.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: CTSongTiSF;
+  src: url('/@/assets/font/SONGTISF.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Source Han Sans CN;
+  src: url('/@/assets/font/Source Han Sans CN Regular.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Source Han Serif CN;
+  src: url('/@/assets/font/Source Han Serif CN Regular.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: DSEG7 Classic;
+  src: url('/@/assets/font/DSEG7ClassicRegular.ttf');
+  font-display: swap;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+  font-size: 0.14rem;
+  color: $base-font-color;
+  background: $base-background-color;
+  font-family: FZShuSong-Z01T, PingFang SC-Regular, PingFang SC, -apple-system, Arial, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif !important;
+}
+
+#app, .container {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 768px;
+  margin: 0 auto;
+  // background: $base-background-color;
+}
+
+.inner_content {
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: constant(safe-area-inset-bottom); /* 兼容 IOS<11.2 */
+  padding-bottom: env(safe-area-inset-bottom); /* 兼容 IOS>11.2 */
+}
+
+.clearfix:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.animate__animated {
+  animation-duration: 0.3s;
+}
+
+html::-webkit-scrollbar, .htmlScroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #F5F5F5;
+}
+
+/* 定义滚动条轨道 内阴影+圆角 */
+html::-webkit-scrollbar-track, .htmlScroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+/* 定义滑块 内阴影+圆角 */
+html::-webkit-scrollbar-thumb, .htmlScroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #bdbdbd;
+}
+
+/* 滑块效果 */
+html::-webkit-scrollbar-thumb:hover, .htmlScroll::-webkit-scrollbar-thumb:hover {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  border-radius: 0;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
