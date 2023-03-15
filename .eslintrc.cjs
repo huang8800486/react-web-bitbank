@@ -31,7 +31,8 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'jsx-a11y/media-has-caption': 0,
     // Exchange
-    'no-param-reassign': ['error', { props: true, ignorePropertyModificationsFor: ['state', 'memo'] }],
+    // 'no-param-reassign': ['error', { props: true, ignorePropertyModificationsFor: ['state', 'memo', 'el'] }],
+    'no-param-reassign': 'off',
     'react/require-default-props': 0,
     'no-nested-ternary': 0,
     'max-classes-per-file': 0,
