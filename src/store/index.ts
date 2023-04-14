@@ -6,8 +6,6 @@ import options from './options/reducer';
 const perCombineReducers = combineReducers({
   options,
 });
-// eslint-disable-next-line import/no-mutable-exports
-let store: ReturnType<typeof initializeStore>;
 
 export function initializeStore() {
   return configureStore({
@@ -21,7 +19,7 @@ export function initializeStore() {
   });
 }
 
-store = initializeStore();
+const store: ReturnType<typeof initializeStore> = initializeStore();
 
 export type AppDispatch = typeof store.dispatch;
 export type AppState = ReturnType<typeof store.getState>;
