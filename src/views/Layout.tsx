@@ -8,8 +8,8 @@ function Layout() {
   const { list, addList } = listStore;
   return (
     <>
-      <div onClick={addList}>list:{list}</div>
-      <div onClick={addCounter}>count:{count}</div>
+      <button onClick={addList}>list:{list}</button>
+      <button onClick={addCounter}>count:{count}</button>
       <HeaderTop />
       <Outlet />;
     </>
