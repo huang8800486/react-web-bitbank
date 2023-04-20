@@ -1,18 +1,23 @@
+import { useEffect, useCallback } from 'react';
 import { Outlet } from 'react-router-dom';
 import HeaderTop from './../components/HeaderTop';
-import { observer } from 'mobx-react-lite';
-import { useStore } from '/@/mobx';
+import { useScreenWidth } from '/@/hooks/initScreen';
+import { useScrollHooks } from '/@/hooks/initScroll';
+import { useOptionsDarkMode } from '/@/store/options/hooks';
 function Layout() {
-  const { listStore, counterStrong } = useStore();
-  const { count, addCounter } = counterStrong;
-  const { list, addList } = listStore;
+  const { screenChange } = useScreenWidth();
+  const { scrollChange } = useScrollHooks();
+  const [optionsDarkMode, setOptionsDarkMode] = useOptionsDarkMode();
+  useEffect(() => {
+    setOptionsDarkMode(optionsDarkMode);
+    screenChange();
+    scrollChange();
+  }, []);
   return (
     <>
-      <button onClick={addList}>list:{list}</button>
-      <button onClick={addCounter}>count:{count}</button>
       <HeaderTop />
       <Outlet />;
     </>
   );
 }
-export default observer(Layout);
+export default Layout;

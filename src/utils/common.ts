@@ -1,5 +1,3 @@
-import { Buffer } from 'buffer';
-
 /**
  * 格式化时间
  * @param {String, Date} dateTime 时间

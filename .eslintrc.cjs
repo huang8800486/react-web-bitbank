@@ -38,5 +38,6 @@ module.exports = {
     'max-classes-per-file': 0,
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/prop-types': [2, { ignore: ['children'] }],
   },
 };
